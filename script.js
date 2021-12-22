@@ -2,6 +2,9 @@ const gridContainer = document.querySelector('grid-container');
 
 function createGrid(){
     const rows = createRows(4);
+    for(let i=0;i<4;i++){
+        gridContainer.appendChild(rows[i]);
+    }
 }
 
 function createRows(amountOfRows, amountOfCellsPerRow){
@@ -22,3 +25,5 @@ function createCells(amountOfCells){
     }
     return cells;
 }
+
+createGrid();

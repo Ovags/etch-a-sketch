@@ -1,0 +1,24 @@
+const gridContainer = document.querySelector('grid-container');
+
+function createGrid(){
+    const rows = createRows(4);
+}
+
+function createRows(amountOfRows, amountOfCellsPerRow){
+    const rows;
+    for(let i=0;i<amountOfRows;i++){
+        row[i]=document.createElement('div');
+        row[i].classList.add('row');
+        row[i].appendChild(createCells(amountOfCellsPerRow));
+    }
+    return rows;
+}
+
+function createCells(amountOfCells){
+    const cells;
+    for(let i=0;i<amountOfCells;i++){
+        cells[i]=document.createElement('div');
+        cells[i].classList.add('cell');
+    }
+    return cells;
+}

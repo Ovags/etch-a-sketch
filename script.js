@@ -15,7 +15,6 @@ function createRows(amountOfRows, amountOfCellsPerRow){
         gridContainer.appendChild(rows[i]);
         for(let j=0;j<amountOfCellsPerRow;j++){
             rows[i].appendChild(createCells(amountOfCellsPerRow)[j]);
-            console.log('bite');
         }
     }
     return rows;
@@ -26,6 +25,9 @@ function createCells(amountOfCells){
     for(let i=0;i<amountOfCells;i++){
         cells[i]=document.createElement('div');
         cells[i].classList.add('cell');
+        cells[i].addEventListener('mouserover',function e(){
+            cells[i].classList.add('wasHovered');
+        });
     }
     return cells;
 }

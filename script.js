@@ -5,7 +5,7 @@ function createGrid(){
 }
 
 function createRows(amountOfRows, amountOfCellsPerRow){
-    const rows;
+    const rows=new Array[amountOfRows];
     for(let i=0;i<amountOfRows;i++){
         row[i]=document.createElement('div');
         row[i].classList.add('row');
@@ -15,7 +15,7 @@ function createRows(amountOfRows, amountOfCellsPerRow){
 }
 
 function createCells(amountOfCells){
-    const cells;
+    const cells=new Array[amountOfCells];
     for(let i=0;i<amountOfCells;i++){
         cells[i]=document.createElement('div');
         cells[i].classList.add('cell');

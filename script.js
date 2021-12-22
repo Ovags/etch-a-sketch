@@ -1,4 +1,4 @@
-const gridContainer = document.querySelector('grid-container');
+const gridContainer = document.querySelector('#grid-container');
 
 function createGrid(){
     const rows = createRows(4);
@@ -8,17 +8,20 @@ function createGrid(){
 }
 
 function createRows(amountOfRows, amountOfCellsPerRow){
-    const rows=new Array[amountOfRows];
+    const rows=new Array;
     for(let i=0;i<amountOfRows;i++){
-        row[i]=document.createElement('div');
-        row[i].classList.add('row');
-        row[i].appendChild(createCells(amountOfCellsPerRow));
+        rows[i] = document.createElement('div');
+        rows[i].classList.add('row');
+        gridContainer.appendChild(rows[i]);
+        for(let j=0;j<amountOfCellsPerRow;j++){
+            rows[i].appendChild(createCells(amountOfCellsPerRow)[j]);
+        }
     }
     return rows;
 }
 
 function createCells(amountOfCells){
-    const cells=new Array[amountOfCells];
+    const cells=new Array;
     for(let i=0;i<amountOfCells;i++){
         cells[i]=document.createElement('div');
         cells[i].classList.add('cell');

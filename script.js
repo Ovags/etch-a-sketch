@@ -25,7 +25,7 @@ function createCells(amountOfCells){
     for(let i=0;i<amountOfCells;i++){
         cells[i]=document.createElement('div');
         cells[i].classList.add('cell');
-        cells[i].addEventListener('mouserover',function e(){
+        cells[i].addEventListener('mouseenter',function e(){/*doesn't work*/
             cells[i].classList.add('wasHovered');
         });
     }

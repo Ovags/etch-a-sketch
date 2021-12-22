@@ -1,7 +1,7 @@
 const gridContainer = document.querySelector('#grid-container');
 
 function createGrid(){
-    const rows = createRows(4);
+    const rows = createRows(4,4);
     for(let i=0;i<4;i++){
         gridContainer.appendChild(rows[i]);
     }
@@ -15,6 +15,7 @@ function createRows(amountOfRows, amountOfCellsPerRow){
         gridContainer.appendChild(rows[i]);
         for(let j=0;j<amountOfCellsPerRow;j++){
             rows[i].appendChild(createCells(amountOfCellsPerRow)[j]);
+            console.log('bite');
         }
     }
     return rows;

@@ -13,3 +13,17 @@
 .cell.wasHovered{
     background-color: red;
 }
+
+#grid-container{
+    flex-direction: column;
+    align-items: center;
+}
+
+#grid-container, #buttons-container{
+    display: flex;
+}
+
+#buttons-container{
+    justify-content: center;
+    gap: 20px;
+}

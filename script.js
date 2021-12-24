@@ -64,9 +64,9 @@ function setButtons(){
 
 function setResetButton(){
     resetButton.addEventListener('click', function e(){
-        cellsToReset=document.getElementsByClassName('wasHovered');
-        for(let i=0;i<cellsToReset.length;){
-            cellsToReset.item(i).classList.remove('wasHovered');
+        cellsToReset=document.getElementsByClassName('cell');
+        for(let i=0;i<cellsToReset.length;i++){
+            cellsToReset.item(i).style.backgroundColor='white';
         }
     });
 }

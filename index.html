@@ -9,10 +9,38 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id='buttons-container'>
-        <button id="reset-button">Reset grid</button>
-        <button id="change-density-button">Change density</button>
+    <div id='left-div'>
+        <h1>Etch-a-Sketch</h1>
+        <h2>
+            Here you can draw what you want. <br>
+            Enjoy!
+        </h2>
+        <ul>
+            <li id="explain-pixel-color">
+                Each "pixel" color will be random.
+            </li>
+            <li id="explain-reset-grid-button">
+                The button "reset-grid" will make the grid white,
+                wiping every magnificent previous drawing of yours.
+            </li>
+            <li id="explain-set-density-button">
+                The button 'Set # of "pixels"' allows you to set the amount of "pixels" 
+                constituting the side of the grid (which is, believe it or not, a square).
+            </li>
+            <li>
+                It is advised to not set # beyond 100 (since even 100 might take some time to render [10 seconds on my computer]).
+            </li>
+            <li>
+                If you feel like a true artist being able to draw something ""realistic"" and not have the excuse "that's because it's a low resolution", set # to 100, wait for rendering (takes around 10 seconds for me) and enjoy your "ultra-hd 4kk res"!
+            </li>
+        </ul>
     </div>
     <div id="grid-container"></div>
+    <div id="right-div">
+        <div id='buttons-container'>
+            <button id="reset-button">Reset grid</button>
+            <button id="change-density-button">Set # of "pixels"</button>
+        </div>        
+    </div>
 </body>
 </html>

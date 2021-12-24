@@ -47,7 +47,7 @@ function createCells(amountOfCells){
         cells[i].classList.add('cell');
         cells[i].setAttribute('style',"width :"+sizeOfCells()+"px; height :"+sizeOfCells()+"px;");
         cells[i].addEventListener('mouseenter',function e(){
-            cells[i].classList.add('wasHovered');
+            cells[i].style.backgroundColor = randomColor();
         });
     }
     return cells;
@@ -89,6 +89,15 @@ function removeGrid(){
     for(let i=0;i<cells.length;){
         cells[0].parentNode.removeChild(cells[0]);
     }
+}
+
+function randomColor(){
+    let characters='0123456789abcdef';
+    let color='#';
+    for(let i=0;i<6;i++){
+        color+=characters[Math.floor(Math.random()*16)];
+    }
+    return color;
 }
 
 createGrid();

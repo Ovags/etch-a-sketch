@@ -5,10 +5,10 @@ let amountOfColumns = 4;
 let amountOfRows = 4;
 
 function sizeAvailable(){
-    if(screen.availWidth<screen.availHeight){
-        return screen.availWidth;
+    if(window.innerHeight<window.innerWidth){
+        return window.innerHeight;
     }
-    return screen.availHeight;
+    return window.innerWidth;
 }
 
 function sizeOfCells(){
@@ -44,14 +44,11 @@ function createCells(amountOfCells){
     const cells=new Array;
     for(let i=0;i<amountOfCells;i++){
         cells[i]=document.createElement('div');
-        console.log('   Created cell '+(i+1));
         cells[i].classList.add('cell');
-        console.log('    Added class "cell"');
+        cells[i].setAttribute('style',"width :"+sizeOfCells()+"px; height :"+sizeOfCells()+"px;");
         cells[i].addEventListener('mouseenter',function e(){
             cells[i].classList.add('wasHovered');
-            console.log('Attempt to change class of cell')
         });
-        console.log('    Added actionListener');
     }
     return cells;
 }

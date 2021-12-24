@@ -25,6 +25,7 @@ body{
     align-items: center;
     border: solid 1px black;
     background-color: white;
+    box-shadow: 0 40px 40px 0 rgb(10, 34, 46)
 }
 
 #grid-container, #buttons-container{
